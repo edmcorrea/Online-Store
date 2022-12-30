@@ -18,14 +18,14 @@
     <p align="center"> O que você precisa, perto de você! </p>
   
   <p align="center">
-    <img width="700" height="400" src="src/images/para-gif-spotunes.gif">
+    <img width="700" height="400" src="src/images/gif.gif">
   </p>
   
   <br />
   
-  <p align="center">
+  <!-- <p align="center">
     <a href="https://projeto-music-stream-spotunes.vercel.app/"><strong>NAVEGUE NA VERSÃO DEMO WEB»</strong></a>
-  </p>
+  </p> -->
 </div>
 
 
