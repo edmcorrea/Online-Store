@@ -5,7 +5,6 @@
 /.pnp
 .pnp.js
 /src/__tests__
-/src/__mocks__
 
 # testing
 /coverage
