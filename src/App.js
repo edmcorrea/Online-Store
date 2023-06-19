@@ -1,10 +1,10 @@
 import React from 'react';
 import './App.css';
 import { BrowserRouter, Route } from 'react-router-dom';
-import Home from './components/Home';
-import Cart from './components/Cart';
-import EmptyCart from './components/EmptyCart';
-import CardDetails from './components/CardDetails';
+import Home from './pages/Home';
+import Cart from './pages/Cart';
+import EmptyCart from './pages/EmptyCart';
+import CardDetails from './pages/CardDetails';
 
 class App extends React.Component {
   state = {
