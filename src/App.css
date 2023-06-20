@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;1,300;1,600&display=swap') ;
+/* @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;1,300;1,600&display=swap') ;
 
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;1,300;1,600&family=Oswald:wght@300;400;700&display=swap') ;
 
@@ -15,15 +15,15 @@ body {
   flex-direction: column;
 }
 
-.header {
+/* .header {
   align-items: center;
   display: flex;
   justify-content: space-around;
   margin: 10px;
   padding: 5px;
-}
+} */
 
-.inputHeader {
+/* .inputHeader {
   display: flex;
   flex-direction: column;
   font-family: Open Sans , sans-serif;
@@ -46,9 +46,9 @@ body {
 }
 
 .btnCart, .btnReturn {
-  font-size: 30px;
-}
+  /* font-size: 30px; */
 
+ /*
 .mainHome {
   display: flex;
   flex-direction: row;
@@ -315,4 +315,4 @@ button, .btnsDetails button {
   font-size: 35px;
   margin: 20px;
   text-align: center;
-}
+} */

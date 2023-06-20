@@ -1,18 +1,18 @@
-import React, { useContext, useEffect, useState } from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { BsSearch, BsCart2 } from 'react-icons/bs';
+import { IoPersonCircleOutline } from 'react-icons/io5';
+import { AiOutlineHeart } from 'react-icons/ai';
+import { CiLocationOn } from 'react-icons/ci';
 import Context from '../../Context/Context';
 import { getProductsFromQuery } from '../../services/api';
 // import userIcon from '../../assets/user-icon.png';
 // import Loading from '../pages/Loading';
-// import '../css/header.css';
+import './Header.scss';
+
 function Header() {
   const { query, setQuery, setSearchList } = useContext(Context);
-  const [username, setUsername] = useState('');
 
-  useEffect(() => {
-    setUsername('');
-  }, []);
   // componentDidMount = async () => {
   //   this.setState({ loading: true });
   //   const { name, image } = await getUser();
@@ -33,41 +33,52 @@ function Header() {
 
   return (
     <header className="header">
-      <img src="https://www.amigoconstrutor.com.br/on/demandware.static/Sites-amigoConstrutor-Site/-/default/dwab647cb6/images/logo/logo_preferential.svg" alt="logo" className="imgLogo" />
-      <section>
-        <label
-          htmlFor="home"
-        >
+      <section className="header-logo">
+        <img src="https://cdn.shopify.com/s/files/1/2316/0905/files/logo_basico.com_2015_preto_1_160x.png?v=1628806076" alt="logo" className="imgLogo" />
+      </section>
+      <section className="header-search">
+        <label htmlFor="home" className="header-search-label">
           <input
+            className="header-search-label-input"
             id="home"
             type="text"
             name="home"
-            placeholder="Pesquise seu produto"
+            placeholder="Pesquise seu produto (nome, marca ou descrição)"
             value={ query }
             onChange={ inputOnChange }
           />
+          <button
+            className="header-search-label-btn"
+            type="button"
+            onClick={ () => handleSearch() }
+          >
+            <BsSearch className="icons-little" />
+          </button>
         </label>
-        <button
-          type="button"
-          onClick={ () => handleSearch() }
-        >
-          <BsSearch />
-        </button>
       </section>
-      <div>
-        <section>
-          <div>
-            {/* <img className="header-user-image" src={ userIcon } alt="userImage" /> */}
-            <h4>{ username }</h4>
-          </div>
-        </section>
-        <Link to="/search">Você está em Feira de Santana</Link>
-        <Link to="/profile">Entrar</Link>
-        <Link to="/favorites">Lista de Compras</Link>
-        <Link to="/cart" className="btnCart">
+      <section className="header-optionsUser">
+        <div className="header-optionsUser-location">
+          <CiLocationOn className="icons" />
+          <Link
+            to="/search"
+            className="header-optionsUser-location-link"
+          >
+            Você está em:
+            <span>Feira de Santana</span>
+          </Link>
+        </div>
+        <div className="header-optionsUser-user">
+          <IoPersonCircleOutline className="icons" />
+          <Link to="/profile" className="header-optionsUser-user-link">
+            Entre ou
+            <span>crie sua conta</span>
+          </Link>
+        </div>
+        <Link to="/favorites"><AiOutlineHeart className="icons" /></Link>
+        <Link to="/cart" className="icons">
           <BsCart2 />
         </Link>
-      </div>
+      </section>
     </header>
   );
 }
