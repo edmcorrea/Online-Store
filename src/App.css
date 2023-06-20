@@ -48,7 +48,7 @@ body {
 .btnCart, .btnReturn {
   /* font-size: 30px; */
 
- /*
+ 
 .mainHome {
   display: flex;
   flex-direction: row;
@@ -315,4 +315,4 @@ button, .btnsDetails button {
   font-size: 35px;
   margin: 20px;
   text-align: center;
-} */
+}

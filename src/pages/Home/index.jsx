@@ -14,6 +14,7 @@ function Home({ addToCart }) {
 
   const categoriesAll = async () => {
     const categoriesShow = await getCategories();
+    console.log(categoriesShow);
     setCategories(categoriesShow);
   };
 
