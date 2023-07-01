@@ -6,21 +6,11 @@ import { AiOutlineHeart } from 'react-icons/ai';
 import { CiLocationOn } from 'react-icons/ci';
 import Context from '../../Context/Context';
 import { getProductsFromQuery } from '../../services/api';
-// import userIcon from '../../assets/user-icon.png';
-// import Loading from '../pages/Loading';
 import './Header.scss';
 
 function Header() {
   const { query, setQuery, setSearchList } = useContext(Context);
 
-  // componentDidMount = async () => {
-  //   this.setState({ loading: true });
-  //   const { name, image } = await getUser();
-  //   this.setState({
-  //     userName: name,
-  //     image,
-  //   }, () => this.setState({ loading: false }));
-  // }
   const inputOnChange = ({ target }) => {
     const { value } = target;
     setQuery(value);

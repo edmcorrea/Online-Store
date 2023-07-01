@@ -1,7 +1,9 @@
 .header {
   display: flex;
   justify-content: center;
+  align-items: center;
   margin: 0 100px;
+  height: 50px;
 
   &-logo {
     margin-right: 16px;
@@ -31,6 +33,7 @@
       &-btn {
         background-color: #f4f4f4;
         border: unset;
+        border-radius: 0;
         width: 50px;
 
       }
